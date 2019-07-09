@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|PT+Sans+Narrow|Roboto&display=swap');
+
+/* root global variables */
+:root {
+    --mainGrey: #A9B2AC;
+    --mainBlack: #191919;
+    --mainYellow: #e3b505;
+    --lightYellow: rgb(242, 180, 80);
+    --darkBrown: #bb9457;
+    --mainTransition: all 1.5s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--mainBlack);
+}
+
+/* global styles */
+.royal {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+/* preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--darkBrown);
+    z-index: 999;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header */
+.header {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        background: url('../images/aroma-aromatic-art-434213.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+}
+
+/* banner */
+.banner {
+    text-align: center;
+    z-index: 3;
+}
+
+.banner__title {
+    font-size: 5.5rem;
+    text-transform: capitalize;
+    color: var(--mainBlack);
+}
+
+@media screen and (min-width:768px) {
+    .banner__title {
+        font-size: 9rem;
+    }
+}
+
+/* social icons */
+.banner__social-icon {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: var(--darkBrown);
+    border-radius: 50%;
+    padding: 0.25rem;
+    transition: var(--mainTransition);
+}
+
+.banner__social-icon:hover {
+    background: var(--mainYellow);
+    color: var(--mainBlack);
+}
+
+.banner__icons {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 2rem);
+    grid-column-gap: 0.5rem;
+    justify-content: center;
+}
+
+/* video */
+.video__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video__item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* nav btn */
+.navBtn {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    font-size: 3rem;
+    color: var(--darkBrown);
+    cursor: pointer;
+}
+
+.navBtn:hover {
+    color: var(--mainYellow);
+}
+
+/* animation */
+.navBtn {
+    animation: navBtn 2s infinite alternate;
+}
+
+@keyframes navBtn {
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* nav */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    background: rgba(0, 0, 0, .6) !important;
+}
+
+nav ul {
+    margin: 0;
+
+}
+
+nav li {
+    display: inline;
+    float: left;
+}
+
+.nav__image {
+    max-height: 55px;
+    padding: 2rem 1.5;
+
+}
+
+.nav__links {
+    padding-left: .7rem;
+    list-style-type: none;
+}
+
+.nav__single-link {
+    color: #d5d5d5;
+    padding-top: .8rem;
+    display: inline-block;
+    width: 100px;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav__single-link:hover {
+    color: #fff;
+}
+
+.link {
+    padding-top: 2rem;
+}
+
+/* */
+.nav {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+}
+
+.nav--show {
+    height: 4.5rem;
+}
+
+/* h */
+h3 {
+    margin-bottom: 3rem;
+}
+
+/* buttons */
+.btn-rounded-white {
+    padding: 1rem 3rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background: var(--mainGrey);
+    color: var(--mainWhite);
+    transition: var(--mainTransition);
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.btn-rounded-white:hover {
+    background: transparent;
+    border: 1px solid var(--mainBlack);
+    text-decoration: none;
+    color: var(--mainYellow);
+}
+
+/* color change */
+.colorchange {
+    animation: colorchangeAuto 1s infinite;
+}
+
+@keyframes colorchangeAuto {
+    0% {
+        color: var(--lightYellow);
+    }
+
+    25% {
+        color: #fff;
+    }
+
+    50% {
+        color: var(--mainYellow);
+    }
+
+    100% {
+        color: var(--lightBlue);
+    }
+}
